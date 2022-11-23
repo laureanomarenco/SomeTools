@@ -1,5 +1,6 @@
 export default function caesarsClipher(str) {
   if (typeof str !== 'string') throw new Error('The argument is not a string');
+  if (str.length === 0) return ('Not string provided');
   const patt = /[A-Z]+$/;
 
   const string = str.toUpperCase();

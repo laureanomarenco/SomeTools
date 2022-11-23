@@ -2,8 +2,8 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable eqeqeq */
 export default function romanNumConverter(num) {
-  if (typeof num !== 'number') throw new Error('The argument is not a number');
-  if (num > 3999) throw new Error('Sorry, only can convert numbers minors of 4000');
+  if (typeof num !== 'number') return('Enter a number');
+  if (num > 3999) return('Sorry, only can convert numbers minors of 4000');
 
   let roman = '';
 
