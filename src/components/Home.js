@@ -1,46 +1,67 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'react-router-dom'
+import { AiFillCheckCircle } from 'react-icons/ai'
+import { MdPrecisionManufacturing } from 'react-icons/md'
+import { VscSymbolNumeric } from 'react-icons/vsc'
+import {
+    FaCashRegister
+} from 'react-icons/fa'
 
 export default function Home() {
     return (
         <View style={styles.container}>
-            <View style={styles.box}>
-                <Link to='/palindrome' style={{ textDecoration: 'none' }}>
+            <Link to='/palindrome' style={{ textDecoration: 'none' }}>
+                <View style={styles.box}>
+                    <AiFillCheckCircle style={styles.icon} />
                     <Text style={styles.text}>Palindrome Checker</Text>
-                </Link>
-            </View>
-            <View style={styles.box}>
-                <Link to='/clipher' style={{ textDecoration: 'none' }}>
+                </View>
+            </Link>
+            <Link to='/clipher' style={{ textDecoration: 'none' }}>
+                <View style={styles.box}>
+                    <MdPrecisionManufacturing style={styles.icon} />
                     <Text style={styles.text}>Caesars Clipher</Text>
-                </Link>
-            </View>
-            <View style={styles.box}>
-                <Link to='/romanConverter' style={{ textDecoration: 'none' }}>
+                </View>
+            </Link>
+            <Link to='/romanConverter' style={{ textDecoration: 'none' }}>
+                <View style={styles.box}>
+                    <VscSymbolNumeric style={styles.icon} />
                     <Text style={styles.text}>Roman Numeral Converter</Text>
-                </Link>
-            </View>
-            <View style={styles.box}>
-                <Link to='/cashRegister' style={{ textDecoration: 'none' }}>
+                </View>
+            </Link>
+            <Link to='/cashRegister' style={{ textDecoration: 'none' }}>
+                <View style={styles.box}>
+                    <FaCashRegister style={styles.icon}/>
                     <Text style={styles.text}>Cash Register</Text>
-                </Link>
-            </View>
+                </View>
+            </Link>
         </View>
     )
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#000',
+        marginTop: 8,
         alignItems: 'center',
         justifyContent: 'top',
     },
     box: {
-        padding: 8,
-        margin: 8
+        backgroundColor: '#102010',
+        flexDirection: 'row',
+        height: 80,
+        width: 300 ,
+        padding: 16,
+        margin: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         fontSize: 16,
-        marginTop: 8,
-        color: '#fff',
+        fontWeight: 600,
+        color: '#809980',
+    },
+    icon: {
+        color: '#809980',
+        height: 40,
+        width: 40,
+        margin: 8,
     }
 });

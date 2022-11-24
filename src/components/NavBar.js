@@ -13,13 +13,13 @@ export default function NavBar() {
 const styles = StyleSheet.create({
     container: {
         margin: 8,
-        backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'top',
     },
     text: {
         fontFamily: '',
-        fontSize: 24,
+        fontSize: 45,
+        fontWeight: 800,
         color: '#fff',
     }
 });
