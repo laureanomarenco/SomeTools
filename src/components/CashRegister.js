@@ -4,7 +4,11 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 export default function CashRegister() {
     const [price, setPrice] = useState('')
     const [cash, setCash] = useState('')
-    const [cid, setCid] = useState([
+    const [cid, setCid] = useState({
+        penny: ''
+    })
+
+    const arrayCid = [
         ["PENNY"],
         ["NICKEL"],
         ["DIME"],
@@ -14,10 +18,19 @@ export default function CashRegister() {
         ["TEN"],
         ["TWENTY"],
         ["ONE HUNDRED"],
-    ])
+    ]
 
-    function setCashInDraw(){
-
+    function setCashInDraw(e){
+        //e.preventDefault();
+        setCid((prevState) => {
+          const newValue = {
+            ...prevState,
+            [e.target.name]: e.target.value,
+          };
+          //setErrors(validate(newValue));
+    
+          return newValue;
+        });
     }
     console.log(cid)
     return (
@@ -41,7 +54,7 @@ export default function CashRegister() {
                 <Text style={styles.text}>Penny</Text>
                 <TextInput
                     style={styles.inputCid}
-                    onChangeText={setCashInDraw}
+                    onChangeText={(e) => setCashInDraw(e)}
                     name='penny'
                 />
             </View>
@@ -51,19 +64,37 @@ export default function CashRegister() {
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#000',
+        marginTop: 8,
         alignItems: 'center',
         justifyContent: 'top',
     },
-    title: {
-        fontSize: 16,
-        marginTop: 8,
-        color: '#fff',
+    box: {
+        backgroundColor: '#102010',
+        flexDirection: 'row',
+        height: 80,
+        width: 300 ,
+        padding: 16,
+        margin: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         marginTop: 8,
-        color: '#fff',
+        fontSize: 16,
+        fontWeight: 600,
+        color: '#809980',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 600,
+        margin: 8,
+        color: '#5ced64',
+    },
+    icon: {
+        color: '#809980',
+        height: 40,
+        width: 40,
+        margin: 8,
     },
     input: {
         borderRadius: 4,

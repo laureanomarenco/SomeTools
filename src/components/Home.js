@@ -37,6 +37,7 @@ export default function Home() {
         </View>
     )
 }
+
 const styles = StyleSheet.create({
     container: {
         marginTop: 8,

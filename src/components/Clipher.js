@@ -21,19 +21,36 @@ export default function Clipher() {
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#000',
+        marginTop: 8,
         alignItems: 'center',
         justifyContent: 'top',
     },
-    title: {
-        fontSize: 16,
-        marginTop: 8,
-        color: '#fff',
+    box: {
+        backgroundColor: '#102010',
+        flexDirection: 'row',
+        height: 80,
+        width: 300 ,
+        padding: 16,
+        margin: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
-        marginTop: 8,
-        color: '#fff',
+        fontSize: 16,
+        fontWeight: 600,
+        color: '#809980',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 600,
+        margin: 8,
+        color: '#5ced64',
+    },
+    icon: {
+        color: '#809980',
+        height: 40,
+        width: 40,
+        margin: 8,
     },
     input: {   
         borderRadius: 4,
