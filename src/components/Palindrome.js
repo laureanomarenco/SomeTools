@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { AiFillCheckCircle } from 'react-icons/ai'
 import palindromeChecker from '../utils/palindromeChecker';
 
 export default function Palindrome() {
@@ -9,6 +10,7 @@ export default function Palindrome() {
 
     return (
         <View style={styles.container}>
+            <AiFillCheckCircle style={styles.icon}/>
             <Text style={styles.title}>Palindrome Checker</Text>
             <Text style={styles.text}>Enter a string to check if is or not a palindrome.</Text>
             <TextInput
@@ -48,14 +50,13 @@ const styles = StyleSheet.create({
         color: '#5ced64',
     },
     icon: {
-        color: '#809980',
+        color: '#5ced64',
         height: 40,
         width: 40,
-        margin: 8,
     },
     input: {   
         borderRadius: 4,
-        margin: 8,
+        margin: 16,
         paddingVertical: 6,
         paddingHorizontal: 60,
         backgroundColor: '#fff'

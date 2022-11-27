@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { VscSymbolNumeric } from 'react-icons/vsc'
 import romanNumConverter from '../utils/romanNumConverter';
 
 export default function RomanConverter() {
@@ -11,6 +12,7 @@ export default function RomanConverter() {
 
     return (
         <View style={styles.container}>
+            <VscSymbolNumeric style={styles.icon}/>
             <Text style={styles.title}>Roman Numeral Converter</Text>
             <Text style={styles.text}>Enter a number to convert it to roman number</Text>
             <TextInput
@@ -50,14 +52,13 @@ const styles = StyleSheet.create({
         color: '#5ced64',
     },
     icon: {
-        color: '#809980',
+        color: '#5ced64',
         height: 40,
         width: 40,
-        margin: 8,
     },
     input: {   
         borderRadius: 4,
-        margin: 8,
+        margin: 16,
         paddingVertical: 6,
         paddingHorizontal: 60,
         backgroundColor: '#fff'

@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { FaCashRegister } from 'react-icons/fa'
 
 export default function CashRegister() {
     const [price, setPrice] = useState('')
     const [cash, setCash] = useState('')
-    const [cid, setCid] = useState({
-        penny: ''
-    })
+    const [penny, setPenny] = useState('')
 
     const arrayCid = [
-        ["PENNY"],
+        ["PENNY", penny],
         ["NICKEL"],
         ["DIME"],
         ["QUARTER"],
@@ -20,21 +19,23 @@ export default function CashRegister() {
         ["ONE HUNDRED"],
     ]
 
-    function setCashInDraw(e){
-        //e.preventDefault();
-        setCid((prevState) => {
-          const newValue = {
-            ...prevState,
-            [e.target.name]: e.target.value,
-          };
-          //setErrors(validate(newValue));
+    console.log(arrayCid)
+    // function setCashInDraw(e){
+
+    //     //e.preventDefault();
+    //     setCid((prevState) => {
+    //       const newValue = {
+    //         ...prevState,
+    //         [e.target.name]: e.target.value,
+    //       };
+    //       //setErrors(validate(newValue));
     
-          return newValue;
-        });
-    }
-    console.log(cid)
+    //       return newValue;
+    //     });
+    //}
     return (
         <View style={styles.container}>
+            <FaCashRegister style={styles.icon}/>
             <Text style={styles.title}>CashRegister</Text>
             <Text style={styles.text}>Enter price, cash and cash in draw</Text>
             <Text style={styles.text}>Price</Text>
@@ -54,8 +55,8 @@ export default function CashRegister() {
                 <Text style={styles.text}>Penny</Text>
                 <TextInput
                     style={styles.inputCid}
-                    onChangeText={(e) => setCashInDraw(e)}
-                    name='penny'
+                    onChangeText={setPenny}
+                    value={penny}
                 />
             </View>
             {/* {<Text style={styles.greenBox}>{roman}</Text>} */}
@@ -91,24 +92,22 @@ const styles = StyleSheet.create({
         color: '#5ced64',
     },
     icon: {
-        color: '#809980',
+        color: '#5ced64',
         height: 40,
         width: 40,
-        margin: 8,
     },
     input: {
         borderRadius: 4,
         margin: 8,
         paddingVertical: 6,
-        paddingHorizontal: 60,
+        width: 80,
         backgroundColor: '#fff'
     },
     inputCid: {
-        width: 4,
+        width: 40,
         borderRadius: 4,
         margin: 8,
         paddingVertical: 2,
-        paddingHorizontal: 60,
         backgroundColor: '#fff'
     },
     boxCid: {

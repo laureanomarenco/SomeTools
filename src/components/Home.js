@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { MdPrecisionManufacturing } from 'react-icons/md'
 import { VscSymbolNumeric } from 'react-icons/vsc'
-import {
-    FaCashRegister
-} from 'react-icons/fa'
+import { FaCashRegister } from 'react-icons/fa'
 
 export default function Home() {
     return (
