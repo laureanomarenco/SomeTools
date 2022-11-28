@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         justifyContent: 'top',
     },
     box: {
-        backgroundColor: '#102010',
+        backgroundColor: '#205020',
         flexDirection: 'row',
         height: 80,
         width: 300 ,
@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 16,
         fontWeight: 600,
-        color: '#809980',
+        color: '#ffffff',
     },
     icon: {
-        color: '#809980',
+        color: '#999999',
         height: 40,
         width: 40,
         margin: 8,

@@ -3,6 +3,7 @@
 /* eslint-disable no-plusplus */
 
 export default function cashRegister(price, cash, cid) {
+  console.log(price,cash,cid)
   const rate = [
     ['PENNY', 0.01],
     ['NICKEL', 0.05],

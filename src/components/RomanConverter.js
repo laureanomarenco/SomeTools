@@ -14,7 +14,7 @@ export default function RomanConverter() {
         <View style={styles.container}>
             <VscSymbolNumeric style={styles.icon}/>
             <Text style={styles.title}>Roman Numeral Converter</Text>
-            <Text style={styles.text}>Enter a number to convert it to roman number</Text>
+            <Text style={styles.textMark}>Enter a number to convert it to roman number</Text>
             <TextInput
                 style={styles.input}
                 onChangeText={setNumber}
@@ -45,11 +45,24 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         color: '#809980',
     },
+    textMark: {
+        marginTop: 8,
+        fontSize: 16,
+        fontWeight: 600,
+        color: '#fff',
+        borderRadius: 4,
+        paddingVertical: 4,
+        paddingHorizontal: 8,
+        backgroundColor: '#205020',
+    },
     title: {
         fontSize: 24,
         fontWeight: 600,
         margin: 8,
         color: '#5ced64',
+        textShadowColor: 'rgba(0, 0, 0, 1)',
+        textShadowOffset: {width: 4, height: 4},
+        textShadowRadius: 1
     },
     icon: {
         color: '#5ced64',
