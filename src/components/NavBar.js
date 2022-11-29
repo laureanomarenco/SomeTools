@@ -13,7 +13,7 @@ export default function NavBar() {
 }
 const styles = StyleSheet.create({
     container: {
-        margin: 8,
+        margin: 4,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'top',
